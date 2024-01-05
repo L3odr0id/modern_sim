@@ -14,7 +14,7 @@ class ModernSim {
     required String phone,
     int? subId,
     int? externalId,
-    required int localId,
+    int? localId,
   }) {
     return ModernSimPlatform.instance.sendSMS(
       message: message,

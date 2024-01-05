@@ -1,10 +1,11 @@
 name: modern_sim
-description: A new Flutter plugin project.
+description: Modern way to get info about sim and send SMS
+repository: https://github.com/L3odr0id/modern_sim
 version: 0.0.1
 homepage:
 
 environment:
-  sdk: '>=2.17.5 <3.0.0'
+  sdk: '>=2.12.5 <4.0.0'
   flutter: ">=2.5.0"
 
 dependencies:

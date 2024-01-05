@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,8 +18,8 @@ class MethodChannelModernSim extends ModernSimPlatform {
 
   @override
   Future<String?> getSimInfo() async {
-    final version = await methodChannel.invokeMethod<String>('getSimInfo');
-    return version;
+    final simInfo = await methodChannel.invokeMethod<String>('getSimInfo');
+    return simInfo;
   }
 
   @override
@@ -30,7 +28,7 @@ class MethodChannelModernSim extends ModernSimPlatform {
     required String phone,
     int? subId,
     int? externalId,
-    required int localId,
+    int? localId,
   }) {
     final mapData = <dynamic, dynamic>{};
     mapData['message'] = message;
@@ -47,5 +45,6 @@ class MethodChannelModernSim extends ModernSimPlatform {
   @override
   void setMethodHandler(Future<void> Function(MethodCall call) handler) {
     methodChannel.setMethodCallHandler(handler);
+    // Use call.arguments and call.method to get info
   }
 }

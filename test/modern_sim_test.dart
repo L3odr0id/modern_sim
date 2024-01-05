@@ -26,7 +26,7 @@ class MockModernSimPlatform
   Future<String> sendSMS({
     required String message,
     required String phone,
-    required int localId,
+    int? localId,
     int? subId,
     int? externalId,
   }) {

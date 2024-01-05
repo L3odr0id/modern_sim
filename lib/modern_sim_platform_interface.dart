@@ -41,7 +41,7 @@ abstract class ModernSimPlatform extends PlatformInterface {
     required String phone,
     int? subId,
     int? externalId,
-    required int localId,
+    int? localId,
   }) {
     throw UnimplementedError('sendSMS() has not been implemented.');
   }
